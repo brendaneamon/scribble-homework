@@ -1,5 +1,7 @@
 <h2>Posts => <%= link_to "Create New Post", new_post_path %> </h2>
 
   <% @posts.each do |post| %>
-      <%= link_to post.name, post %>
+    <h3> <%= link_to post.title, post %> </h3>
+    <h4> Post made by <%= post.author %> </h4>
+    <p> <%= post.content %> </p>
   <% end %>

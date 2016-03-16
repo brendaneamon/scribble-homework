@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
 
-    redirect_to post_comments_path(@post, @comment)
+    redirect_to post_comments_url(@post, @comment)
   end
 
   def destroy
@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
 
-    redirect_to post_comments_path( @post )
+    redirect_to post_comments_url( @post )
   end
 
   private
