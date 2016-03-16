@@ -3,7 +3,7 @@
 
 <p><%= @post.content%></p>
 
-<h3>Comments <%= link_to "Add", new_post_comment_path( @post ) %></h3>
+<h3>Comments <%= link_to "(Add New Comment)", new_post_comment_path( @post ) %></h3>
 
 <ul>
   <% @post.comments.each do |comment| %>
