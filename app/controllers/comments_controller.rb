@@ -45,6 +45,8 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
+    # AM: Do you need to include `post_id` in strong params?
+    # AM: Seems like something you can define for a comment that does not depend on user input.
     params.require(:comment).permit(:author, :content, :post_id)
   end
 end
